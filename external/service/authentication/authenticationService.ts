@@ -10,7 +10,7 @@ export interface IAuthentication {
     request: formSignin
   ): Promise<AxiosResponse<{message: string}, errorResponse>>
   getUser(
-  ): Promise<AxiosResponse<formSignin, errorResponse>>
+  ): Promise<AxiosResponse<formSignin[], errorResponse>>
 }
 
 export class AuthenticationService implements IAuthentication {
@@ -20,7 +20,7 @@ export class AuthenticationService implements IAuthentication {
       return http('SIGNIN').post<responseGeneric>('/auth/register', request)
   }
   async getUser(
-  ): Promise<AxiosResponse<formSignin, errorResponse>> {
-      return http('SIGNIN').get<formSignin>('/users')
+  ): Promise<AxiosResponse<formSignin[], errorResponse>> {
+      return http('SIGNIN').get<formSignin[]>('/users')
   }
 }

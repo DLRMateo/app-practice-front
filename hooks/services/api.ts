@@ -13,7 +13,7 @@ export class Api implements IAuthentication {
   constructor() {
     this.sigin = new AuthenticationService()
   }
-  getUser(): Promise<AxiosResponse<formSignin, errorResponse>> {
+  getUser(): Promise<AxiosResponse<formSignin[], errorResponse>> {
     return this.sigin.getUser()
   }
 
