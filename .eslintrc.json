@@ -1,0 +1,18 @@
+{
+  "globals": {
+    "JSX": true
+  },
+  "plugins": ["@tanstack/query"],
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "prettier",
+    "./node_modules/standard/eslintrc.json",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "rules": {
+    "space-before-function-paren": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-curly-newline": "off"
+  }
+}
