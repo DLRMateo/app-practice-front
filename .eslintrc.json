@@ -7,7 +7,6 @@
     "next/core-web-vitals",
     "next",
     "prettier",
-    "./node_modules/standard/eslintrc.json",
     "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
   "rules": {
